@@ -1,4 +1,4 @@
-SD-ElasticSearch
+SD-Beanstalkd
 ================
 
 [Beanstalk](http://kr.github.com/beanstalkd/) plugin for ServerDensity. Tested with v1.7.
