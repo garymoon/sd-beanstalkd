@@ -32,8 +32,6 @@ class Beanstalkd:
         if ('Beanstalk' not in self.agentConfig):
             self.set_default_config()
 
-        self.connect()
-
     def set_default_config(self):
         self.agentConfig = {}
         self.agentConfig['Beanstalk'] = {'host': 'localhost', 'port': '11300'}
@@ -99,6 +97,8 @@ class Beanstalkd:
 
     def run(self):
         payload = {}
+        
+        self.connect()
 
         # Main Beanstalkd stats
         stats = self.get_stats()
